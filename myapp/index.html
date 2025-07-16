@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUT Connect - Student Collaboration Platform</title>
+    <!-- External CSS for Features page -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Embedded CSS for common elements -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #002244;
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Logo Animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .logo {
+            animation: pulse 2s infinite;
+            height: 80px;
+        }
+
+        /* Banner Animation */
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-color: #005588;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    rgba(0, 51, 102, 0.8) 0%,
+                    rgba(0, 85, 136, 0.6) 50%,
+                    rgba(0, 51, 102, 0.8) 100%);
+            animation: slide 10s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        /* Testimonial Section */
+        .testimonials {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .testimonial-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .testimonial-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid #4DA6FF;
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Animated Logo -->
+    <header>
+        <img src="https://vut.ac.za/wp-content/uploads/2025/05/Vaal-University-of-Technology.webp"
+            alt="VUT Connect Logo" class="logo">
+        <h1>VUT Connect</h1>
+        <p>Connecting Students Across Campus</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content (Home Page) -->
+    <main>
+        <!-- Animated Banner -->
+        <div class="banner">
+            <div class="banner-text">
+                <h2>Welcome to VUT Connect</h2>
+                <p>Your campus connection platform</p>
+            </div>
+        </div>
+
+        <section>
+            <h2>About VUT Connect</h2>
+            <p>VUT Connect is a digital space where VUT students can collaborate, share resources, and support each
+                other throughout their academic journey.</p>
+
+            <h3>Key Benefits:</h3>
+            <ul>
+                <li>Real-time connection with peers</li>
+                <li>Location-based study groups</li>
+                <li>Instant messaging system</li>
+                <li>Campus event coordination</li>
+            </ul>
+        </section>
+        <section class="testimonials">
+  <h2>What Our Users Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card visible">
+      <img src="https://images.pexels.com/photos/819530/pexels-photo-819530.jpeg?auto=compress&cs=tinysrgb&w=600" alt="User 1" class="testimonial-img" />
+      <p class="testimonial-quote">"VUT Connect has transformed how I collaborate with my classmates!"</p>
+      <p class="testimonial-author">- Steven M.</p>
+    </div>
+                <div class="testimonial-card visible">
+                    <img src="https://images.pexels.com/photos/7683706/pexels-photo-7683706.jpeg?auto=compress&cs=tinysrgb&w=600" alt="User 2" class="testimonial-img">
+                    <p class="testimonial-quote">"I love the study group feature, it makes finding help so easy!"</p>
+                    <p class="testimonial-author">- Sipho .</p>
+                </div>
+                <div class="testimonial-card visible">
+                    <img src="https://images.pexels.com/photos/8005550/pexels-photo-8005550.jpeg?auto=compress&cs=tinysrgb&w=600" alt="User 3" class="testimonial-img">
+                    <p class="testimonial-quote">"The event coordination tools are a game changer for campus life!"</p>
+                    <p class="testimonial-author">- Lerato N.</p>
+                </div>
+            </div>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2023 VUT Connect | <a href="https://www.vut.ac.za" style="color: #4da6ff;">Official VUT Website</a> A
+            Unilinkers Project</p>
+    </footer>
+    <script>
+        // Simple animation for testimonials
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll('.testimonial-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 300); // Stagger the animation
+            });
+        });
+    </script>
+    <script>
+        // Simple animation for the banner text
+        const bannerText = document.querySelector('.banner-text');
+        bannerText.style.opacity = 0;
+        setTimeout(() => {
+            bannerText.style.opacity = 1;
+            bannerText.style.transform = 'translateY(0)';
+        }, 500);
+    </script>
+
+
+<script>
+  // Create rain container
+  const rainContainer = document.createElement('div');
+  rainContainer.classList.add('rain-background');
+  document.body.prepend(rainContainer);
+
+  // Number of raindrops
+  const numDrops = 100;
+
+  for (let i = 0; i < numDrops; i++) {
+    const drop = document.createElement('div');
+    drop.classList.add('raindrop');
+
+    // Random horizontal position in viewport width
+    drop.style.left = Math.random() * 100 + 'vw';
+
+    // Random fall speed between 0.5s and 2s
+    drop.style.animationDuration = (0.5 + Math.random() * 1.5) + 's';
+
+    // Random delay to stagger drops
+    drop.style.animationDelay = (Math.random() * 3) + 's';
+
+    rainContainer.appendChild(drop);
+  }
+</script>
+
+</body>
+
+</html>

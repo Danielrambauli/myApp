@@ -1,0 +1,14 @@
+/vut-connect/
+│── index.php
+│── features.php
+│── contact.php
+│── submit_form.php
+│── includes/
+│   │── header.php
+│   │── footer.php
+│   │── nav.php
+│── css/
+│   │── styles.css
+│── assets/
+│   │── logo.png
+│   │── banner-bg.jpg
